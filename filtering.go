@@ -4,19 +4,19 @@ import "fmt"
 
 type Predicate func(int) bool
 
-func Filter(list []int, p Predicate) ([]int, []int) {
+func Split_BackOrderDestroy(list []int, p Predicate) ([]int, []int) {
 	pivot := 0
 	for i := 0; i < len(list); i++ {
 		if p(list[i]) {
 			// swap with pivot
 			list[i], list[pivot] = list[pivot], list[i]
 			pivot++
-		} // otherwise leave it 
+        } // otherwise leave it 
 	}
 	return list[:pivot], list[pivot:]
 }
 
-func Filter_destructive(list []int, p Predicate) ([]int) {
+func Filter_BackDestroy(list []int, p Predicate) ([]int) {
 	pivot := 0
 	for i := 0; i < len(list); i++ {
 		if p(list[i]) {
