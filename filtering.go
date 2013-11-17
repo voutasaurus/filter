@@ -4,7 +4,7 @@ import "fmt"
 
 type Predicate func(int) bool
 
-func Split_BackOrderDestroy(list []int, p Predicate) ([]int, []int) {
+func Split_BackUnstable(list []int, p Predicate) ([]int, []int) {
 	pivot := 0
 	for i := 0; i < len(list); i++ {
 		if p(list[i]) {
