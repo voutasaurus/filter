@@ -1,4 +1,4 @@
-filtering
+filter
 =========
 
-Filtering slices in place in Go
+In place filtering for int slices in Go
